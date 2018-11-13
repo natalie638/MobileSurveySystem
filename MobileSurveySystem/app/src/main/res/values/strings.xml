@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MobileSurveySystem</string>
+    <string name="question_tag">Question</string>
+</resources>

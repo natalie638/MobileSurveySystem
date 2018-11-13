@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/inflate_questionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Question:"
+
+        android:textAppearance="?android:attr/textAppearanceLarge" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/inFlate_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inflate_questionLabel"
+        android:layout_marginTop="8dp"
+        android:text="Enter a question"
+        android:textAppearance="?android:attr/textAppearanceLarge" >
+    </TextView>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="107dp" />
+</RelativeLayout>
