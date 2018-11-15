@@ -28,10 +28,8 @@ public class AddWizardItem extends Activity {
 
                 Intent intent = new Intent();
 //                gather add Item data
-
                 WizardItem.packageIntent(intent,mQuestion.getText().toString());
                 Log.i(TAG, "the new added questions: "+ mQuestion.getText().toString());
-
 //                return data Intent and finish
                 setResult(RESULT_OK,intent);
                 finish();
@@ -45,6 +43,8 @@ public class AddWizardItem extends Activity {
                 finish();
             }
         });
+
+
 
 
     }

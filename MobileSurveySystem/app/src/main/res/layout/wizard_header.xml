@@ -8,10 +8,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Survery Name"
+        android:text="Survey Name"
 
-        android:textAppearance="?android:attr/textAppearanceLarge" >
-    </TextView>
+        android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
 
     <EditText
         android:id="@+id/titleinput"
@@ -20,8 +19,9 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/TitleLabel"
         android:ems="10"
-        android:hint="Enter Survery Name"
+        android:hint="Enter Survey Name"
         android:inputType="textShortMessage">
+
         <requestFocus />
     </EditText>
 
