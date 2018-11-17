@@ -86,15 +86,14 @@ public class SurveryWizard extends ListActivity {
                 int question_number =1;
 
 
-
                 for (WizardItem x : alldata ){
-                    databasebRef.child(lat_string+" , "+log_string).child(tmp_title).child(question_number+"")
-                            .setValue(x.getQuestion());
+                    databasebRef.child(lat_string+" , "+log_string).child(tmp_title).child(question_number+"").child(x.getQuestion())
+                            .setValue(0);
+
 
                     Log.i(TAG, "data: "+x.getQuestion());
                     question_number++;
                 }
-
 
                 finish();
             }else{
