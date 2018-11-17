@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -62,6 +63,8 @@ public class SurveryWizard extends ListActivity {
         @Override
         public void onClick(View v) {
 
+
+
 //            Use reference as key a like structure
 //            then we can set the value to different values
 //            as right now I am using location as key and rest as value
@@ -69,24 +72,34 @@ public class SurveryWizard extends ListActivity {
             DatabaseReference databasebRef = database.getReference("New Survey");
 
             List<WizardItem> alldata = mAdapter.getAllItemsData();
-            EditText title =  findViewById(R.id.titleinput);
-            EditText location = findViewById(R.id.locationinput);
-            String tmp_location = location.getText().toString();
-            String tmp_title = title.getText().toString();
-            int question_number =1;
+            //            TODO check if there is nothing to submit then pop something
+
+            if(alldata.size()!=0){
+                EditText title =  findViewById(R.id.titleinput);
+                EditText lat = findViewById(R.id.latitude_input);
+                EditText log = findViewById(R.id.longtitude_input);
+
+                String lat_string = lat.getText().toString();
+                String log_string = log.getText().toString();
+
+                String tmp_title = title.getText().toString();
+                int question_number =1;
 
 
-            for (WizardItem x : alldata ){
-                databasebRef.child(tmp_location).child(tmp_title).child(question_number+"")
-                        .setValue(x.getQuestion());
+                for (WizardItem x : alldata ){
+                    databasebRef.child(lat_string+" , "+log_string).child(tmp_title).child(question_number+"")
+                            .setValue(x.getQuestion());
 
-                Log.i(TAG, "data: "+x.getQuestion());
-                question_number++;
+                    Log.i(TAG, "data: "+x.getQuestion());
+                    question_number++;
+                }
+
+
+                finish();
+            }else{
+                Toast.makeText(getApplicationContext(),"Please Add a Question before you submit the survey",Toast.LENGTH_SHORT).show();
             }
 
-//            TODO check if there is nothing to submit then pop something
-
-            finish();
         }
     });
 
