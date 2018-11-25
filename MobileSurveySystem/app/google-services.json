@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "581104086532",
+    "firebase_url": "https://mobilesurveysystem-6cb5c.firebaseio.com",
+    "project_id": "mobilesurveysystem-6cb5c",
+    "storage_bucket": "mobilesurveysystem-6cb5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581104086532:android:b8dec994137ff18f",
+        "android_client_info": {
+          "package_name": "com.example.yewang.mobilesurveysystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581104086532-f4kdc8tsn69hfo3a85sfcubk0qcmm37n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yewang.mobilesurveysystem",
+            "certificate_hash": "d1618f29962b5bb094c90384e82b650c9cff9b59"
+          }
+        },
+        {
+          "client_id": "581104086532-f2k07q7d3137eohm92in2ckgb61duclv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA07tQh9xzG4RNL0BBm5RslZsufr1O1vu4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581104086532-f2k07q7d3137eohm92in2ckgb61duclv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

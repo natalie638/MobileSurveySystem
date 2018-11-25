@@ -46,6 +46,7 @@ public class WizardItem {
         this.rating = rating;
     }
 
+
     @Override
     public String toString() {
         return "Question: "+ ITEM_SEP +getQuestion()+" Rating :"+ getRating();

@@ -1,10 +1,12 @@
 package com.example.yewang.mobilesurveysystem;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -31,7 +33,9 @@ public class WizardItemListAdapter extends BaseAdapter {
     public void delete(int pos){
         mItems.remove(pos);
     }
-
+    public List<WizardItem> getAllItemsData(){
+        return mItems;
+    }
 
     @Override
     public int getCount() {
@@ -49,8 +53,8 @@ public class WizardItemListAdapter extends BaseAdapter {
     }
 //Create a View for the WizardItem at specified position
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        RelativeLayout my_layout = (RelativeLayout)LayoutInflater.from(mContext).inflate(R.layout.inflate_item_in_list,null);
+    public View getView(final int position, final View convertView, ViewGroup parent) {
+       final RelativeLayout my_layout = (RelativeLayout)LayoutInflater.from(mContext).inflate(R.layout.inflate_item_in_list,null);
         final WizardItem wizItem = (WizardItem)getItem(position);
         final TextView question = (TextView) my_layout.findViewById(R.id.inFlate_questions);
         question.setText(wizItem.getQuestion());

@@ -7,21 +7,24 @@
         android:id="@+id/TitleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Survery Name"
+        android:layout_alignParentTop="true"
 
-        android:textAppearance="?android:attr/textAppearanceLarge" >
-    </TextView>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Survey Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
 
     <EditText
         android:id="@+id/titleinput"
-        android:layout_width="match_parent"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/TitleLabel"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
         android:ems="10"
-        android:hint="Enter Survery Name"
+        android:hint="Please Enter Survey Name"
         android:inputType="textShortMessage">
+
         <requestFocus />
     </EditText>
 
@@ -29,23 +32,38 @@
         android:id="@+id/Location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_below="@+id/titleinput"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="129dp"
         android:text="Location"
-        android:textAppearance="?android:attr/textAppearanceLarge" >
-    </TextView>
+        android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+
     <EditText
-        android:id="@+id/locationinput"
-        android:layout_width="match_parent"
+        android:id="@+id/longtitude_input"
+        android:layout_width="193dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Location"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/latitude_input"
         android:ems="10"
-        android:hint="Enter Location TBA format"
+        android:hint="Longitude"
         android:inputType="textShortMessage">
+
         <requestFocus />
     </EditText>
 
+    <EditText
+        android:id="@+id/latitude_input"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="173dp"
+        android:ems="10"
+        android:hint="Latitude"
+        android:inputType="textShortMessage">
+
+        <requestFocus />
+    </EditText>
 
 
 </RelativeLayout>

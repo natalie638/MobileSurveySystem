@@ -2,14 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/wizFooter"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:padding="5dp" >
 
     <Button
         android:id="@+id/addWizBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/colorGrey"
         android:text="Add new Survery" />
 
     <Button
@@ -17,5 +22,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/colorBlue"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:text="Submit Survery" />
+
 </LinearLayout>
